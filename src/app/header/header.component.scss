@@ -1,0 +1,26 @@
+header{
+    background-color: var(--b2);
+    padding: 10px 0px;
+    position:fixed;
+    width: 100%;
+    z-index: 99;
+    .mat-toolbar{
+        background-color: var(--b2);
+        color:white;
+        padding: 0px 60px;
+        .logoHeader{
+            cursor:pointer;
+            img{
+                height: 40px;
+            }
+        }
+    } 
+}
+.example-spacer {
+    flex: 1 1 auto;
+}
+@media only screen and (max-width: 800px) {
+    .mat-toolbar{
+        padding: 0px 30px!important;
+    }
+}

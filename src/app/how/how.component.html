@@ -1,0 +1,54 @@
+<main>
+    <section>
+        <div class="cjaCruces der lesTop"></div>  
+        <div class="lineSep lesTop more"></div>
+        <article class="cjaInfo extend" >
+            <h2>¿Cómo esto ayuda alas marcas?</h2>    
+            <p>Esta vision nos ayuda a transformar el journey</p>
+            <ul *ngIf="marcas" >
+                <li *ngFor="let m of marcas"  matRipple >
+                    <img [src]="rest.apiUrlBase+'img/'+m.photo" alt="">
+                    <h3>{{m.title}}</h3>
+                    <p>{{m.description}}</p>
+                </li>
+            </ul>
+        </article> 
+    </section>
+    <div class="cjaCruces izq"></div> 
+    <div class="lineSep lesTop"></div>  
+    <section>
+        <article class="cjaInfo extend" >
+            <h2>¿Cómo esto ayuda alas marcas?</h2>    
+            <p>Esta vision nos ayuda a transformar el journey</p>
+            <ul>
+                <li matRipple >
+                    <img src="../../assets/iconosPage/img7.png" alt="">
+                    <p>1. Usa los diferentes selectores y filtros para ver diferentes resultados.</p>
+                </li>
+                <li matRipple >
+                    <img src="../../assets/iconosPage/img8.png" alt="">
+                    <p>2. Navega entre las pestañas para encontrar lo que estas buscando.</p>
+                </li>
+                <li matRipple >
+                    <img src="../../assets/iconosPage/img9.png" alt="">
+                    <p>3. También puedes escuchar los análisis con los principales insights, haciendo click en el botón de audio.</p>
+                </li>
+            </ul>
+        </article> 
+    </section>
+    <section>
+        <article class="cjaInfo minor" >
+            <p>Ya estas listo para ingresar y visualizar toda la información presentada.</p>
+            <a class="btn example-ripple-container" matRipple >Ir al Dashboard</a>
+        </article> 
+    </section>
+    <div class="lineSep lesTop"></div> 
+    <div class="cjaCruces der sm"></div>
+    <section class="mSec">
+        <article class="cjaInfo minor" >
+            <h2>Contacto</h2>
+            <p>Si tienes alguna duda o inquietud por favor no dudes en contactarnos al siquiente correo:</p>
+            <a class="btn example-ripple-container lg" matRipple >data.manager@wundermanthompson.com</a>
+        </article> 
+    </section>
+</main>

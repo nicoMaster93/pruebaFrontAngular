@@ -1,0 +1,181 @@
+@mixin flex{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin cubo {
+    height: 420px;        
+    width: 100%;
+}
+@mixin setList{
+    list-style: none;
+    display: inline-block;
+    padding: 0px;
+    margin:auto;
+}
+main{
+    background-image: url(../../assets/iconosPage/img1.png);
+    background-repeat:no-repeat;
+    background-size: 1700px auto;
+    background-position-x: 200px;
+    background-position-y: -475px;
+    background-color:var(--b1);
+    overflow: hidden;
+    padding-top: 85px;
+    &:before{
+        content: "";
+        display: block;
+        position: absolute;
+        height: 1060px;
+        right: 0;
+        width: 15%;
+        background-color: var(--b2);
+        margin-top: -5px;
+    }
+    section{
+        &:nth-of-type(1){
+            height: 560px;
+            padding-top: 100px;
+        }
+        &:nth-of-type(3){
+            // height: 560px;
+            padding-top: 115px;
+        }
+        ul.fondoMorado{
+            @include cubo;
+            @include setList;
+            @include flex;
+            background-color: #391393;
+            margin-left: -30px;
+            li{
+                width: 100%;
+                @include flex;
+                img{
+                    width: 70%;
+                }
+            }
+        } 
+        .fondoColorfull{
+            @include cubo;
+            overflow: hidden;
+            height: 480px;
+            width: 105%;
+            img{
+                width: 100%;
+            }
+        }
+    }
+    .flex{
+        @include flex;
+    }       
+    .lesTop{
+        top: -50px;
+        &.more{
+            top: -135px;
+        }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    main{
+        background-position-x: -315px;
+        background-position-y: -490px;
+        background-size: 1600px auto;
+        &:before{
+            content: "";
+            display: none;
+        }
+        section{
+            &:nth-of-type(1){
+                height: 560px;
+                padding-top: 100px;
+            }
+            &:nth-of-type(3){
+                display: grid!important;
+                padding-top: 115px;
+            }
+            ul.fondoMorado{
+                display: grid;
+                height: max-content;
+                padding: 45px 0px;
+                margin: 0;
+                li{
+                    width: 100%;
+                    margin: 10px 0px;
+                    img{
+                        width: 70%;
+                    }
+                }
+            } 
+            .fondoColorfull{
+                // @include cubo;
+                height: 620px;
+                width: 80%;
+                max-width: 500px;
+                padding: 0;
+                margin: 0;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+                img{
+                    width:auto;
+                    height: 100%;
+                }
+            }
+        }      
+        .lesTop{
+            top: -50px;
+            &.more{
+                top: -135px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    main{
+        background-position-x: -435px;
+        background-position-y: -435px;
+        background-size: 1600px auto;
+        &:before{
+            content: "";
+            display: none;
+        }
+        section{
+            &:nth-of-type(1){
+                height: 560px;
+                padding-top: 100px;
+            }
+            &:nth-of-type(3){
+                display: grid!important;
+                padding-top: 115px;
+            }
+            ul.fondoMorado{
+                display: grid;
+                height: max-content;
+                padding: 45px 0px;
+                margin: 0;
+                li{
+                    width: 100%;
+                    margin: 10px 0px;
+                    img{
+                        width: 70%;
+                    }
+                }
+            } 
+            .fondoColorfull{
+                // @include cubo;
+                height: 450px;
+                width: 80%;
+                max-width: 450px;
+            }
+        }      
+        .lesTop{
+            top: -50px;
+            &.more{
+                top: -50px;
+            }
+        }
+    }
+}
